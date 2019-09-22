@@ -139,7 +139,7 @@ docker-compose down
 #### Delete all docker images that contain the name “web”
 run
 ```
-docker image rm $(docker images | grep ‘web’)
+docker image rm $(docker images | grep 'web')
 ```
 
 #### Delete all docker images that contain the name “ruby”
