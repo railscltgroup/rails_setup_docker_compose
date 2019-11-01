@@ -11,7 +11,7 @@ services:
       - RAILS_DB_URL_DEV=postgresql://postgres:password@db/APP_NAME_development
       - RAILS_DB_URL_TEST=postgresql://postgres:password@db/APP_NAME_test
     build: .
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    command: /bin/sh -c "rm -f /APP_NAME/tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/APP_NAME
       - /APP_NAME/node_modules
