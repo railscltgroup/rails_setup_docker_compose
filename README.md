@@ -83,7 +83,7 @@ You’ll also need to click on `Terminal` and `New Terminal` to open a terminal 
 
 Once you are located in your new Rails app, run
 ```
-docker-compose up -d
+docker-compose build
 ```
 To build and start-up your new app.  This may take awhile to finish.
 
