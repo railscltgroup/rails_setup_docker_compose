@@ -85,7 +85,7 @@ Once you are located in your new Rails app, run
 ```
 docker-compose build
 ```
-To build and start-up your new app.  This may take awhile to finish.
+to build your new app.  This may take awhile to finish.
 
 ### Step 9: Setup database
 You app is running, but you have not created a database.
