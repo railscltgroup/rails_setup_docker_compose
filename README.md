@@ -72,7 +72,7 @@ docker image rm web
 ```
 To delete the setup image from docker.
 
-### Step 8: Start app using docker-compose
+### Step 8: Checkout your new app
 You have created a new Rails App!
 
 This means you are done with the setup folder.  You can keep it or remove it from your computer.  It’s your choice!
@@ -81,22 +81,23 @@ Next, you want to use Visual Studio Code to open the `myapp` folder you just cre
 
 You’ll also need to click on `Terminal` and `New Terminal` to open a terminal in your app.
 
-Once you are located in your new Rails app, run
-```
-docker-compose build
-```
-to build your new app.  This may take awhile to finish.
+Feel free to checkout the files and app you just created!
 
-### Step 9: Setup database
-You app is running, but you have not created a database.
+### Step 9: Setup app and database
+You already built software to create the app.  You have not yet built software to run the app.
+
 run
 ```
 docker-compose run --rm web rails db:create db:migrate
 ```
-to create a database, connected to your app
+to build app software and create a database. This may take awhile to finish.
 
-### Step 10: Checkout your app
-Visit http://localhost:3000/ in your browser.  
+### Step 10: View your new app in the browser
+run
+```
+docker-compose up
+```
+and visit http://localhost:3000/ in your browser.  
 
 If your app is working, you should see `Yay! You're on Rails!` on the webpage.
 
