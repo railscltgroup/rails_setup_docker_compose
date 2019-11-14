@@ -33,3 +33,6 @@ RUN sed -i "s/APP_NAME/${APP_NAME}/g" $APP_HOME/$APP_NAME/docker-compose.yml
 RUN echo "Add Dockerfile"
 COPY setup/Dockerfile $APP_HOME/$APP_NAME/Dockerfile
 RUN sed -i "s/APP_NAME/${APP_NAME}/g" $APP_HOME/$APP_NAME/Dockerfile
+
+RUN echo "Add dockerignore file"
+COPY setup/.dockerignore $APP_HOME/$APP_NAME/.dockerignore
