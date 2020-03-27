@@ -155,4 +155,10 @@ run
 docker image rm $(docker images | grep 'postgres')
 ```
 
+#### Delete any dangling docker volumes
+run
+```
+docker volume rm $(docker volume ls -qf dangling=true)
+```
+
 ### Delete myapp folder from your computer
