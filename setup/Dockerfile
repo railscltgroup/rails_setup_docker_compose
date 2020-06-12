@@ -1,4 +1,4 @@
-FROM ruby:2.7.0-alpine3.10
+FROM ruby:2.7.1-alpine3.12
 
 ENV POSTGRES postgresql postgresql-dev
 ENV RAILS build-base tzdata ruby-nokogiri libcurl
@@ -8,7 +8,7 @@ RUN apk update && apk upgrade && \
     apk add $POSTGRES $RAILS $YARN && \
     rm /var/cache/apk/*
 
-RUN gem install bundler:2.1.2
+RUN gem install bundler:2.1.4
 
 ENV APP_HOME /APP_NAME
 WORKDIR $APP_HOME

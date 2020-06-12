@@ -1,4 +1,4 @@
-FROM ruby:2.7.0-alpine3.10
+FROM ruby:2.7.1-alpine3.12
 
 ARG APP_NAME=myapp
 
@@ -13,8 +13,8 @@ RUN apk update && apk upgrade && \
 
 RUN npm install -g yarn@1.22.4
 
-RUN gem install bundler:2.1.2
-RUN gem install rails:6.0.2
+RUN gem install bundler:2.1.4
+RUN gem install rails:6.0.3
 
 ENV APP_HOME /docker-build
 WORKDIR $APP_HOME
