@@ -1,7 +1,7 @@
 FROM ruby:3-alpine3.12
 
 ENV POSTGRES postgresql postgresql-dev
-ENV RAILS build-base tzdata ruby-nokogiri libcurl
+ENV RAILS build-base tzdata ruby-nokogiri libcurl shared-mime-info
 ENV YARN nodejs nodejs-npm
 
 RUN apk update && apk upgrade && \

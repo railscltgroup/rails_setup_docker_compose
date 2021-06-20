@@ -2,12 +2,15 @@ version: '3.9'
 
 services:
   db:
+    environment:
+      - POSTGRES_PASSWORD=password
     image: postgres:13-alpine
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
 
   web:
     environment:
+      - POSTGRES_PASSWORD=password
       - RAILS_DB_URL_DEV=postgresql://postgres:password@db/APP_NAME_development
       - RAILS_DB_URL_TEST=postgresql://postgres:password@db/APP_NAME_test
     build: .

@@ -3,7 +3,7 @@ FROM ruby:3-alpine3.12
 ARG APP_NAME=myapp
 
 ENV POSTGRES postgresql postgresql-dev
-ENV RAILS build-base tzdata ruby-nokogiri libcurl git
+ENV RAILS build-base tzdata ruby-nokogiri libcurl git shared-mime-info
 ENV YARN nodejs nodejs-npm
 
 RUN echo "Add software for Rails, Yarn, and Postgres"
