@@ -99,7 +99,7 @@ docker-compose up
 ```
 and visit http://localhost:3000/ in your browser.  
 
-If your app is working, you should see `Yay! You're on Rails!` on the webpage.
+If your app is working, you should see the Rails logo on the webpage.
 
 Congratulations! You’ve made a Rails application!
 
